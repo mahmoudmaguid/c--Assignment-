@@ -16,11 +16,12 @@ namespace c___1_Assignment
 
 
             string DynamicTextFile = Console.ReadLine();
-            if (File.Exists(DynamicTextFile))
+            Boolean checkedFname = File.Exists(DynamicTextFile);
+            if (checkedFname)
             {
 
 
-                while (DynamicTextFile == "DynamicTextFile")
+                while (checkedFname==true)
                 {
                     string DynamicTextFileContent = Console.ReadLine();
                     File.WriteAllText(DynamicTextFile, DynamicTextFileContent);
@@ -37,11 +38,12 @@ namespace c___1_Assignment
             }
             else
             {
-                while (DynamicTextFile != "DyanamicTextFile")
+                while (checkedFname==false)
                 {
                     Console.WriteLine("WRONG FILE PLEASE TRY AGAIN");
                     DynamicTextFile = Console.ReadLine();
-                    while (DynamicTextFile == "DynamicTextFile")
+                    checkedFname = File.Exists(DynamicTextFile);
+                    while (checkedFname==true)
                     {
                         string DynamicTextFileContent = Console.ReadLine();
                         File.WriteAllText(DynamicTextFile, DynamicTextFileContent);
