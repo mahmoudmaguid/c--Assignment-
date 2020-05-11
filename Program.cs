@@ -17,7 +17,7 @@ namespace c___1_Assignment
 
             string DynamicTextFile = Console.ReadLine();
             Boolean checkedFname = File.Exists(DynamicTextFile);
-            if (checkedFname)
+            if (checkedFname==true)
             {
 
 
